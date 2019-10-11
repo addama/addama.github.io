@@ -27,7 +27,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  addama
 
 # Build settings
-theme: minima
+#theme: minima
 layouts_dir: _layouts
 #plugins:
 # - jekyll-paginate
