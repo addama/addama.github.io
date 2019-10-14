@@ -12,6 +12,10 @@
 				<div id='readingTimeContainer'>{% include reading_time.html %}</div>
 			{% endif %}
 			{{ content }}
+			
+			{% if page.categories and site.use_category_listing == true %}
+				{% include categories.html page=page %}
+			{% endif %}
 		</main>
 		{% include footer.html page=page %}
 	</body>

@@ -37,7 +37,7 @@ To add a new document:
   - `{Title}` is the title. The title can have spaces, as Jekyll slugifies the titles, but for operating system safety, it's best to use underscores or dashes between words.
 1. Open your file
 1. Add the following [front matter](https://jekyllrb.com/docs/front-matter/) to the top of the file:
-```md
+```yaml
 ---
 title: 
 author: 

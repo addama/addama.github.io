@@ -156,3 +156,8 @@ table:not(.rouge-table) td {
 	border-left: 1px solid #eee;
 	border-right: 1px solid #eee;
 }
+
+#categoryContainer {
+	margin-top: 1em;
+	text-align: right;
+}
