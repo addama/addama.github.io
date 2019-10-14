@@ -46,6 +46,7 @@ excerpt:
 ---
 ```
 1. Edit the front matter to include a `title`, `author`, `categories`, and `excerpt`. These properties are mandatory for order and sanity to prevail - don't be the loser that doesn't fill them out!
+  - `categories` is an array of plain strings, e.g. `categories: [ Q&A, Checklist, Draft ]`, and can have as many categories as you want. Be aware that if a post has no categories, it will not show up on the home page list.
   - You may wish to look at the main listing to see what categories already exist
 1. Commit your document
   - Github Pages only allows up to 10 new builds per hour, and it generally takes between 10 and 60 seconds to build a new version. If your changes don't appear immediately, this may be why.
@@ -61,6 +62,8 @@ You can change the font by adding the font to `/css/fonts`, and adding it to `/c
 The header and footer on all of the pages can be found in `/_includes`. Be aware that changing these will change the look and feel of ALL pages, as all pages are currently using the `default` layout, which loads the header and footer. You can use Liquid to make decisions based on what page you're on to do page-specific things. But, like, don't do that, please. Simple is better.
 
 You can add images to `/images`. Feel free to create subdirectories under that if that makes organization/naming easier.
+
+Pagination was too much of a pain in the ass to set up, which informs much of how the rest of the site was configured. Pagination does not work in Github Pages unless it's in an `html` file, and there was just no valid reason to go through that effort just for some pagination. 
 
 ## Resources
 * [Ruby](https://www.ruby-lang.org/en/)
