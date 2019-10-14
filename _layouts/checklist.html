@@ -1,0 +1,18 @@
+<!doctype html>
+{% comment %}
+Includes point toward /_includes
+{% endcomment %}
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>{{ page.title }}</title>
+		<link rel="stylesheet" href="/css/default.css">
+	</head>
+	<body>
+		{% include header.html page=page %}
+		<section>
+		  {{ content }}
+		</section>
+		{% include footer.html page=page %}
+	</body>
+</html>
