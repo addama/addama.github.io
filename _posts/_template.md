@@ -18,3 +18,99 @@ excerpt: This is a template you can use to create new posts
 > # Blockquotes
 > Blockquotes are rendered in a different way
 >> You can nest them too
+
+## Code Blocks
+
+`import React from 'react';`
+
+```js
+import 'hacktimer' // must be first import
+import '@babel/polyfill'
+import { History } from './XtractInit' // must be before store import
+import React from 'react'
+import jQuery from 'jquery'
+import { render } from 'react-dom'
+import xtractAuth, { authActions } from 'xtract-auth'
+import xtractAPI from 'xtract-api'
+import { Provider } from 'react-redux'
+import { Router, Route } from 'react-router-dom'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/pro-solid-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { far } from '@fortawesome/pro-regular-svg-icons'
+import { draggable, resizeable } from './Helper/interactable'
+import { faArrowsAltH } from '@fortawesome/pro-light-svg-icons'
+import Store from './store'
+import App from './components/App.jsx'
+import './SagaInit' // must come last
+
+// const sdk = new Fingerprint.WebApi()
+// console.log(sdk)
+
+// build fontawesome library
+library.add(fas, far, fab, faArrowsAltH)
+
+// require jquery
+window.jQuery = jQuery
+
+// require the parts of bootstrap we are using
+require('../bootstrap/js/dropdown.js')
+require('../bootstrap/js/tooltip.js')
+
+// Import css and fonts
+require('./styles/indexStyles.styl')
+require('./less/index.less')
+require('intro.js/introjs.css')
+
+// initialize draggable and resizeable windows
+draggable()
+resizeable()
+
+// Hot reloading reducers?
+if (module.hot) {
+  module.hot.accept('./reducers/rootReducer', () => {
+    const nextRootReducer = require('./reducers/rootReducer').default
+    Store.replaceReducer(nextRootReducer)
+  })
+}
+
+xtractAuth.setStore(Store, {
+  // object of actions
+  locationChange: function locationChange(url) {
+    return { type: 'APP_LOCATION_CHANGE', url }
+  }
+})
+xtractAPI.setStore(Store)
+
+// if the app reloaded and we have a refresh token, use it to try to
+// get a new token
+const Auth = Store.getState().auth || {}
+if (Auth.refreshToken != null) {
+  // if they have a refresh token, send them to the login path while we try to use it
+  Store.dispatch(authActions.doTokenRefresh())
+  Store.dispatch({ type: 'APP_LOCATION_CHANGE', url: 'login' })
+}
+
+render(
+  <Provider store={Store}>
+    <Router history={History}>
+      <Route component={App} />
+    </Router>
+  </Provider>,
+  document.getElementById('root')
+)
+
+//# sourceMappingURL=/dist/app.js.map
+
+// expose store when run in Cypress
+if (window.Cypress) {
+  window.store = Store
+}
+```
+
+## Images
+![Image](/images/logo.png)
+
+## Links
+
+[Links](http://xtractsolutions.com)

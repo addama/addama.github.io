@@ -8,7 +8,10 @@
 	<body>
 		{% include header.html page=page %}
 		<main>
-		  {{ content }}
+			{% if page.categories and site.use_reading_time == true %}
+				<div id='readingTimeContainer'>{% include reading_time.html %}</div>
+			{% endif %}
+			{{ content }}
 		</main>
 		{% include footer.html page=page %}
 	</body>

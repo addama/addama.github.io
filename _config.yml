@@ -1,7 +1,6 @@
-url: "addama.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
-title: "Xtract Solutions Documentation" # the name of your site, e.g. ACME Corp.
-
+url: "addama.github.io"
+title: "Xtract Solutions Documentation"
+permalink: /:categories/:title
 highlighter: rouge
 markdown: kramdown
 kramdown:
@@ -16,3 +15,7 @@ kramdown:
     block:
       line_numbers: true
       start_line: 1
+      
+# Custom props
+use_reading_time: false
+lazy_person_title: Lazy Person
