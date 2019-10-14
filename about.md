@@ -10,7 +10,7 @@ permalink: /about/
 
 **For normal interactions with the site, you don't need to install anything** - but if you need to change the layout or want to test your checklist locally, you'll need to set up your environment.
 
-The site runs on github-pages, which interprets pages using Jekyll and Liquid. So, so run this locally, we need to set that up.
+The site runs on github-pages, which interprets pages using Jekyll and Liquid. So, to run this locally, we need to set that up.
 
 1. [Install Ruby](https://www.ruby-lang.org/en/downloads/)
 1. Clone the repo
@@ -70,6 +70,7 @@ Pagination was too much of a pain in the ass to set up, which informs much of ho
 * [Bundler](https://bundler.io/)
 * [Jekyll](https://jekyllrb.com/)
 * [Liquid](https://shopify.github.io/liquid/)
+* [YAML](https://en.wikipedia.org/wiki/YAML)
 * [Github Pages](https://pages.github.com/)
 * [Markdown (for Github)](https://guides.github.com/features/mastering-markdown/)
 * [Ruby Gems available by default on Github Pages](https://pages.github.com/versions/)
