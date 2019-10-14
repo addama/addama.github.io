@@ -8,7 +8,7 @@ permalink: /about/
 
 ## Installation
 
-**For normal interactions with the site, you don't need to install anything** - but if you need to change the layout or want to test your checklist locally, you'll need to set up your environment.
+**For normal interactions with the site, like reading documents or adding new ones, you don't need to install anything** - but if you need to change the layout or want to test your checklist locally, you'll need to set up your environment.
 
 The site runs on github-pages, which interprets pages using Jekyll and Liquid. So, to run this locally, we need to set that up.
 
