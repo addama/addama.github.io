@@ -50,6 +50,18 @@ excerpt:
 1. Commit your document
   - Github Pages only allows up to 10 new builds per hour, and it generally takes between 10 and 60 seconds to build a new version. If your changes don't appear immediately, this may be why.
 
+## Site-wide Config Changes
+
+You can change overarching info about the site in the `/_config.yml` file.
+
+You can change the syntax highlighting color scheme by editing the `/css/default.css` file, and changing the `@import` line to point to a different CSS file in `/css/syntax`. By default, I have included *fruity*, *github*, *monokai*, *native*, *zenburn*, and our own branded style, *xtract*.
+
+You can change the font by adding the font to `/css/fonts`, and adding it to `/css/default.css` as a new font face (or edit the existing entry, just remember to change the name). The default font used is *Raleway*.
+
+The header and footer on all of the pages can be found in `/_includes`. Be aware that changing these will change the look and feel of ALL pages, as all pages are currently using the `default` layout, which loads the header and footer. You can use Liquid to make decisions based on what page you're on to do page-specific things. But, like, don't do that, please. Simple is better.
+
+You can add images to `/images`. Feel free to create subdirectories under that if that makes organization/naming easier.
+
 ## Resources
 * [Ruby](https://www.ruby-lang.org/en/)
 * [Bundler](https://bundler.io/)

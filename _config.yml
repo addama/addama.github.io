@@ -1,5 +1,11 @@
-url: "addama.github.io"
-title: "Xtract Solutions Documentation"
+# You can change these
+url: http://addama.github.io
+repo: https://github.com/addama/addama.github.io
+title: Xtract Solutions Documentation Site
+use_reading_time: false
+lazy_person_title: Lazy Person
+
+# You should not change these
 permalink: /:categories/:title
 highlighter: rouge
 markdown: kramdown
@@ -7,15 +13,10 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
   syntax_highlighter_opts:
-    # Rouge Options › https://github.com/jneen/rouge#full-options
-    css_class: 'highlight'
+    css_class: highlight
     default_lang: js
     span:
       disable: false
     block:
       line_numbers: true
       start_line: 1
-      
-# Custom props
-use_reading_time: false
-lazy_person_title: Lazy Person

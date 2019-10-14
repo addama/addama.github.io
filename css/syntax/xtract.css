@@ -64,9 +64,9 @@
 .highlight .o { color: #aaa; font-weight: 900 } /* Operators */
 
 .highlighter-rouge {
-	color: #000;
+	color: #0072bc;
     background-color: #eee;
-	padding: 0 1em;
+	padding: 0 0.5em;
 	border-radius: 5px;
 }
 
