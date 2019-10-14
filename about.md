@@ -4,7 +4,7 @@ title: "Xtract Solutions Documentation | About"
 permalink: /about/
 ---
 
-# Welcome to Documentation Land
+# About This Site
 
 ## Installation
 
