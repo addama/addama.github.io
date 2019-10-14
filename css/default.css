@@ -111,3 +111,31 @@ pre.highlight {
 	float: right;
 	font-style: italic;
 }
+
+table:not(.rouge-table) {
+	min-width: 33%;
+	max-width: 90%;
+	border-collapse: collapse;
+	border: 1px solid #eee;
+	
+}
+
+table:not(.rouge-table) tbody tr:hover {
+	background-color: #FECD0E;
+	font-weight: bold;
+}
+
+table:not(.rouge-table) th {
+	padding: 5px 1rem;
+	border: 1px solid #ddd;
+	border-bottom: none;
+	background-color: #0072bc;
+	color: #fff;
+}
+
+table:not(.rouge-table) td {
+	min-width: 3em;
+	padding: 5px 1em;
+	border-left: 1px solid #eee;
+	border-right: 1px solid #eee;
+}
