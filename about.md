@@ -6,6 +6,8 @@ permalink: /about/
 
 # About This Site
 
+***The Xtract Solutions Documentation Site is open to the public; do not make documents including proprietary, HIPAA, or customer data!***
+
 ## Installation
 
 **For normal interactions with the site, like reading documents or adding new ones, you don't need to install anything** - but if you need to change the layout or want to test your checklist locally, you'll need to set up your environment.
@@ -50,6 +52,16 @@ excerpt:
   - You may wish to look at the main listing to see what categories already exist
 1. Commit your document
   - Github Pages only allows up to 10 new builds per hour, and it generally takes between 10 and 60 seconds to build a new version. If your changes don't appear immediately, this may be why.
+
+## Formatting Tips
+
+Documents should be header-based. Use different sized headers (`#`, `##`, `###`) to organize your text and make it easier to read.
+
+Always wrap variables and short code snippets in a code tag. It takes a little longer to type it the first time, but it makes reading and searching for variables and code easier.
+
+If you want to center an image on the page, add `?style=center` to the image URL, e.g.: `![Xtract Solutions logo](/images/logo.png?style=center)`
+
+Space your markdown out - whitespace matters! Add new lines before and after each header, image, paragraph, table, etc. If you don't, it becomes harder to edit in the future, and can have unintended formatting effects.
 
 ## Site-wide Config Changes
 

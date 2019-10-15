@@ -7,6 +7,8 @@ use_category_listing: true
 lazy_person_title: Lazy Person
 
 # You should not change these
+plugins:
+ - jekyll-mentions
 permalink: /:categories/:title
 highlighter: rouge
 markdown: kramdown
