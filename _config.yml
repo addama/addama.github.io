@@ -9,6 +9,8 @@ lazy_person_title: Lazy Person
 # You should not change these
 plugins:
  - jekyll-mentions
+ - jemoji
+
 permalink: /:categories/:title
 highlighter: rouge
 markdown: kramdown

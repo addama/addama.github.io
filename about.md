@@ -86,3 +86,4 @@ Pagination was too much of a pain in the ass to set up, which informs much of ho
 * [Github Pages](https://pages.github.com/)
 * [Markdown (for Github)](https://guides.github.com/features/mastering-markdown/)
 * [Ruby Gems available by default on Github Pages](https://pages.github.com/versions/)
+* [Emoji Cheatsheet](https://www.webfx.com/tools/emoji-cheat-sheet/)

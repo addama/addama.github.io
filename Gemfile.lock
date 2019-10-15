@@ -248,6 +248,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-mentions
+  jemoji
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)
