@@ -126,6 +126,11 @@ pre.highlight {
 	font-size: smaller;
 }
 
+.postExcerpt {
+	display: block;
+	margin-bottom: 1em;
+}
+
 #readingTimeContainer {
 	float: right;
 	font-style: italic;
@@ -160,4 +165,9 @@ table:not(.rouge-table) td {
 #categoryContainer {
 	margin-top: 1em;
 	text-align: right;
+}
+
+img[src$='center'] {
+	display: block;
+	margin: 0 auto;
 }

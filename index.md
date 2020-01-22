@@ -1,10 +1,8 @@
 ---
 layout: default
-title: "Xtract Solutions Documentation"
+title: "addama.net | Writing Portfolio"
 ---
 
-# Xtract Solutions Documentation Site
+# Writing Portfolio
 
-Welcome to the Xtract Solutions Documentation Site! See the [About](/about/) page for info on how to use this site and add new documents. 
-
-{% include document_index.html page=page %}
+[Supervisor Handbook](/supervisor-handbook)

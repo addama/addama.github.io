@@ -1,10 +1,10 @@
 # You can change these
 url: http://addama.github.io
 repo: https://github.com/addama/addama.github.io
-title: Xtract Solutions Documentation Site
+title: addama.net Writing Portfolio
 use_reading_time: false
 use_category_listing: true
-lazy_person_title: Lazy Person
+lazy_person_title: Addama
 
 # You should not change these
 plugins:
