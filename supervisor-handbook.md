@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Xtract Solutions Documentation | About"
+title: "Supervisor Handbook"
 permalink: /supervisor-handbook/
 ---
 

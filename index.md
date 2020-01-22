@@ -1,8 +1,18 @@
 ---
 layout: default
-title: "addama.net | Writing Portfolio"
+title: "Index"
 ---
 
 # Writing Portfolio
 
-[Supervisor Handbook](/supervisor-handbook)
+## Business and Policy
+
+* [Supervisor Handbook](/supervisor-handbook)
+* [Development Standards of Practice](/dev-sop)
+* [Security Policy](/security-policy)
+* [Hiring Process](/hiring-process)
+
+## Technical
+
+* [SQL Primer](/sql-primer)
+* [Scrum Primer](/scrum-primer)

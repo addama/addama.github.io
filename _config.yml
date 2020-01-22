@@ -2,8 +2,7 @@
 url: http://addama.github.io
 repo: https://github.com/addama/addama.github.io
 title: addama.net Writing Portfolio
-use_reading_time: false
-use_category_listing: true
+use_reading_time: true
 lazy_person_title: Addama
 
 # You should not change these

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Xtract Solutions Documentation | About"
+title: "Development SOP"
 permalink: /dev-sop/
 ---
 

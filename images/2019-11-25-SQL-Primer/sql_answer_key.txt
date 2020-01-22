@@ -1,0 +1,133 @@
+-- Easy 1
+DESCRIBE user;
+
+-- Easy 2
+SELECT * FROM user;
+
+-- Easy 3
+SELECT * FROM user ORDER BY privilege;
+
+-- Easy 4
+SELECT * FROM user WHERE displayname = 'Xtract Admin';
+
+-- Easy 5
+SELECT displayname, password, deleted FROM user WHERE displayname = 'Xtract Admin';
+
+-- Easy 6
+SELECT displayname AS 'Name', password as 'Password', deleted AS 'Deleted' FROM user WHERE displayname = 'Xtract Admin';
+
+
+-- Medium 1
+INSERT INTO location SET name = 'Test', deleted = 'T';
+
+-- Medium 2
+UPDATE location SET name = 'Test2' WHERE name = 'Test';
+
+-- Medium 3
+DELETE FROM location WHERE name = 'Test';
+
+-- Medium 4
+SELECT
+	user.displayname AS 'User',
+	user_group.name as 'Group'
+FROM
+	user,
+	user_group,
+	user_group_user
+WHERE
+	user.user_id = user_group_user.user_id
+	AND user_group.user_group_id = user_group_user.user_group_id;
+
+
+-- Hard 1
+SELECT * FROM config WHERE name LIKE '%3';
+
+-- Hard 2
+SELECT * FROM config WHERE name LIKE '%hot%';
+
+-- Hard 3
+SELECT * FROM config WHERE name LIKE '%3' AND name NOT LIKE '%bottle%';
+
+-- Hard 4
+SELECT * FROM config WHERE name LIKE 'bottle%' OR name like '%3';
+
+-- Hard 5
+SELECT
+	user_group.name,
+	count(user_group_user.user_id)
+FROM
+	user_group,
+	user_group_user
+WHERE
+	user_group.user_group_id = user_group_user.user_group_id
+GROUP BY
+	user_group.name;
+	
+-- Hard 6
+SELECT
+	user.displayname AS 'User',
+	COUNT(prescription.prescription_id) AS 'Prescriptions'
+FROM
+	user,
+	prescription
+WHERE
+	user.user_id = prescription.user_id
+GROUP By
+	displayname
+ORDER BY
+	COUNT(prescription.prescription_id) DESC,
+	displayname DESC
+LIMIT 3;
+
+
+-- Crazy 1
+SELECT 
+	clinic.name AS 'Clinic',
+	provider.displayname AS 'Provider',
+	prescription.priority AS 'Priority',
+	CONCAT(patient.lastname, ', ', patient.firstname) AS 'Patient',
+	diagnosis.displayname AS 'Diagnosis',
+	patient.dob AS 'DOB',
+	prescription.prescription_id AS 'Prescription',
+	user.displayname AS 'User'
+FROM
+	prescription,
+	clinic,
+	diagnosis,
+	patient,
+	provider,
+	user
+WHERE
+	prescription.clinic_id = clinic.clinic_id 
+	AND prescription.diagnosis_id = diagnosis.diagnosis_id
+	AND prescription.patient_id = patient.patient_id
+	AND prescription.provider_id = provider.provider_id
+	AND prescription.user_id = user.user_id
+ORDER BY
+	clinic.name,
+	provider.displayname,
+	prescription.priority,
+	CONCAT(patient.lastname, ', ', patient.firstname) DESC;
+
+-- Crazy 1 ALTERNATIVE USING JOINS
+SELECT 
+	clinic.name AS 'Clinic',
+	provider.displayname AS 'Provider',
+	prescription.priority AS 'Priority',
+	CONCAT(patient.lastname, ', ', patient.firstname) AS 'Patient',
+	diagnosis.displayname AS 'Diagnosis',
+	patient.dob AS 'DOB',
+	prescription.prescription_id AS 'Prescription',
+	user.displayname AS 'User'
+FROM
+	prescription
+INNER JOIN clinic ON prescription.clinic_id = clinic.clinic_id 
+INNER JOIN diagnosis ON prescription.diagnosis_id = diagnosis.diagnosis_id
+INNER JOIN patient ON prescription.patient_id = patient.patient_id
+INNER JOIN provider ON prescription.provider_id = provider.provider_id
+INNER JOIN user ON prescription.user_id = user.user_id
+ORDER BY
+	clinic.name,
+	provider.displayname,
+	prescription.priority,
+	CONCAT(patient.lastname, ', ', patient.firstname) DESC;
