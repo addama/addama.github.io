@@ -9,12 +9,12 @@
 		<a id='top' title='Top of the page'></a>
 		{% include header.html page=page %}
 		<main>
-			{% if page.title != 'Index' %}
-				{% include reading_time.html %}
-			{% endif %}
+		{% if page.title != 'Index' and page.title != 'About' %}
+			{% include reading_time.html %}
+		{% endif %}
 			{{ content }}
 		</main>
-		{% if page.title != 'Index' %}
+		{% if page.title != 'Index' and page.title != 'About' %}
 		<footer>
 			<a href='#top' title='Back to the top of the page'>Back to top</a>
 		</footer>

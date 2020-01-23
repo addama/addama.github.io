@@ -109,7 +109,6 @@ pre.highlight {
 }
 
 #readingTimeContainer {
-	/* float: right; */
 	font-style: italic;
 	display: flex;
 	flex-direction: column;
@@ -124,10 +123,11 @@ table:not(.rouge-table) {
 	min-width: 33%;
 	border-collapse: collapse;
 	border: 1px solid #eee;
+	text-align: left;
 }
 
 table:not(.rouge-table) tbody tr:hover {
-	background-color: #FECD0E;
+	background-color: #eee;
 	font-weight: bold;
 }
 
